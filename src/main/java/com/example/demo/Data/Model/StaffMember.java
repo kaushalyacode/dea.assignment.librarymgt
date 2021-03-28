@@ -20,4 +20,10 @@ public class StaffMember
 
     @Column(name = "memeber_name",updatable = true,nullable = false)
     private String name;
+
+    @Column(name = "memeber_telephone",updatable = true,nullable = true)
+    private String telephone;
+
+    @Column(name = "memeber_nic",updatable = true,nullable = false)
+    private String nic;
 }

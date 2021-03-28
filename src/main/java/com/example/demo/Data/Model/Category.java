@@ -13,7 +13,6 @@ import javax.persistence.*;
 @Table(name = "Category" ,schema = "public")
 public class Category
 {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "category_id",nullable = false,updatable = false)
