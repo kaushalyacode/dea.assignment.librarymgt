@@ -22,10 +22,10 @@ public class AuthorController {
         return "home.jsp";
     }
 
-    @RequestMapping("/addAuthor")
-    public String addAuthor()
+    @RequestMapping("http://localhost:8089/addAutho")
+    public String addAuthor(Author author)
     {
-      //  iAuthorRepository.sav
+        iAuthorRepository.save(author);
         return  "Nol";
 
     }
