@@ -9,14 +9,15 @@ import javax.persistence.*;
 @Setter
 @ToString
 @Entity
-@Table(name ="Author" , schema = "public")
-public class Author
-{
+@Table(name = "Section" ,schema = "public")
+public class Section {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "author_id",nullable = false,updatable = false)
+    @Column(name = "section_id",nullable = false,updatable = false)
     private int id;
 
-    @Column(name = "author_name",updatable = true,nullable = false)
+    @Column(name = "section_name",updatable = true,nullable = false)
     private String name;
+
 }
