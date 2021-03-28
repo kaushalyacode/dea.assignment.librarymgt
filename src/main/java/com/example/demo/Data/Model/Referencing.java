@@ -23,7 +23,6 @@ public class Referencing
     @JoinColumn(name="Book_id")
     private Book book;
 
-
     /*many to one unidirectional*/
     @ManyToOne(optional = false)
     @JoinColumn(name="student_id")
