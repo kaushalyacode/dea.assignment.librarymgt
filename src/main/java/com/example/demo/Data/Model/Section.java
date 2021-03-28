@@ -20,4 +20,7 @@ public class Section {
     @Column(name = "section_name",updatable = true,nullable = false)
     private String name;
 
+    @Column(name ="return_time_in_hr",updatable = true ,nullable = false)
+    private int returnTimeInHours;
+
 }

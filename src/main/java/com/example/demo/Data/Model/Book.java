@@ -1,11 +1,11 @@
 package com.example.demo.Data.Model;
 
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -33,7 +33,26 @@ public class Book {
     @Column(name = "available_quantity",updatable = true,nullable = false)
     private int availableQty;
 
+    /*many to one unidirectional*/
     @ManyToOne(optional = false)
     @JoinColumn(name="publisher_id")
     private Publisher publisher;
+
+    /*many to one unidirectional*/
+    @ManyToOne(optional = false)
+    @JoinColumn(name="category_id")
+    private Category category;
+
+    /*many to many unidirectionl*/
+    @ManyToMany(cascade=CascadeType.ALL)
+    @JoinTable(name="author_book", joinColumns=@JoinColumn(name="book_id"), inverseJoinColumns=@JoinColumn(name="author_id"))
+    private Set<Author> authors;
+
+    /*many to many unidirectionl*/
+    @ManyToMany(cascade=CascadeType.ALL)
+    @JoinTable(name="section_book", joinColumns=@JoinColumn(name="book_id"), inverseJoinColumns=@JoinColumn(name="section_id"))
+    private Set<Section> section;
+
+
+
 }
