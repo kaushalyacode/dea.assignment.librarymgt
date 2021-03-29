@@ -4,6 +4,7 @@ import com.example.demo.Data.Model.Book;
 import java.sql.*;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Dao {
 
@@ -17,7 +18,7 @@ public class Dao {
     Book book =null;
     Connection conn = null;
     PreparedStatement pstmt = null;
-    Collection books =null;
+    List<Book> books =null;
     Collection referencing =null;
 
     String retrieveBooks = "SELECT * FROM book where stock_quantity <> available_quantity";
@@ -30,9 +31,9 @@ public class Dao {
         conn = DriverManager.getConnection(DB_URL,USER,PASS);
     }
 
-    public Collection getBorrowedBooks(){
+    public List<Book> getBorrowedBooks(){
 
-        books = new LinkedList();
+        books = new LinkedList<Book>();
 
         try {
             pstmt = conn.prepareStatement(retrieveBooks);
