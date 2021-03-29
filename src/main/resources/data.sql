@@ -25,25 +25,25 @@ insert into Publisher(publisher_id,publisher_name) values ( 3,'kurulu' );
 
 --INSERT BOOKS
 insert into Book(book_id,book_title,book_isbn,stock_quantity,borrow_quantity,available_quantity,publisher_id,category_id)
-values ( 1,'BOOK1','ISBN1',100, 32,68,1,1);
+values ( 1,'BOOK1','ISBN1',100, 32,100,1,1);
 insert into Book(book_id,book_title,book_isbn,stock_quantity,borrow_quantity,available_quantity,publisher_id,category_id)
-values ( 2,'BOOK2','ISBN2',100, 32,68,1,1);
+values ( 2,'BOOK2','ISBN2',100, 32,100,1,1);
 insert into Book(book_id,book_title,book_isbn,stock_quantity,borrow_quantity,available_quantity,publisher_id,category_id)
-values ( 3,'BOOK3','ISBN3',100, 32,68,1,1);
+values ( 3,'BOOK3','ISBN3',100, 32,100,1,1);
 insert into Book(book_id,book_title,book_isbn,stock_quantity,borrow_quantity,available_quantity,publisher_id,category_id)
-values ( 4,'BOOK4','ISBN4',100, 32,68,1,1);
+values ( 4,'BOOK4','ISBN4',100, 32,100,1,1);
 insert into Book(book_id,book_title,book_isbn,stock_quantity,borrow_quantity,available_quantity,publisher_id,category_id)
-values ( 5,'BOOK5','ISBN5',100, 32,68,1,1);
+values ( 5,'BOOK5','ISBN5',100, 32,100,1,1);
 insert into Book(book_id,book_title,book_isbn,stock_quantity,borrow_quantity,available_quantity,publisher_id,category_id)
-values ( 6,'BOOK6','ISBN6',100, 32,68,1,1);
+values ( 6,'BOOK6','ISBN6',100, 32,100,1,1);
 insert into Book(book_id,book_title,book_isbn,stock_quantity,borrow_quantity,available_quantity,publisher_id,category_id)
-values ( 7,'BOOK7','ISBN7',100, 32,68,1,1);
+values ( 7,'BOOK7','ISBN7',100, 32,100,1,1);
 insert into Book(book_id,book_title,book_isbn,stock_quantity,borrow_quantity,available_quantity,publisher_id,category_id)
-values ( 8,'BOOK8','ISBN8',100, 32,68,1,1);
+values ( 8,'BOOK8','ISBN8',100, 32,100,1,1);
 insert into Book(book_id,book_title,book_isbn,stock_quantity,borrow_quantity,available_quantity,publisher_id,category_id)
-values ( 9,'BOOK19','ISBN9',100, 32,68,1,1);
+values ( 9,'BOOK19','ISBN9',100, 32,100,1,1);
 insert into Book(book_id,book_title,book_isbn,stock_quantity,borrow_quantity,available_quantity,publisher_id,category_id)
-values ( 10,'BOOK10','ISBN10',100, 32,68,1,1);
+values ( 10,'BOOK10','ISBN10',100, 32,100,1,1);
 insert into Book(book_id,book_title,book_isbn,stock_quantity,borrow_quantity,available_quantity,publisher_id,category_id)
 values ( 11,'BOOK11','ISBN11',100, 32,68,1,1);
 insert into Book(book_id,book_title,book_isbn,stock_quantity,borrow_quantity,available_quantity,publisher_id,category_id)
