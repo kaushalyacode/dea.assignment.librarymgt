@@ -16,7 +16,7 @@ public class Dao {
 
     Book book =null;
     Connection conn = null;
-    Statement stmt = null;
+    PreparedStatement pstmt = null;
     Collection books =null;
 
     String retrieveBooks = "SELECT * FROM book";
@@ -26,7 +26,7 @@ public class Dao {
         System.out.println("start conncetion etablishement");
         Class.forName(JDBC_DRIVER);
         conn = DriverManager.getConnection(DB_URL,USER,PASS);
-        stmt = conn.createStatement();
+        pstmt = conn.prepareStatement(retrieveBooks);
     }
 
 
@@ -36,7 +36,7 @@ public class Dao {
 
         try {
 
-            ResultSet rs = stmt.executeQuery(retrieveBooks);
+            ResultSet rs = pstmt.executeQuery();
 
             while(rs.next()) {
 
@@ -51,9 +51,9 @@ public class Dao {
                 books.add(book);
             }
             rs.close();
-        } catch(SQLException se) {
+        } catch(SQLException e) {
 
-            se.printStackTrace();
+            e.printStackTrace();
 
         } catch(Exception e) {
 
@@ -62,13 +62,21 @@ public class Dao {
         } finally {
 
             try {
-                if(stmt!=null) stmt.close();
-            } catch(SQLException se2)
+                if(pstmt!=null)
+                {
+                    pstmt.close();
+                }
+            } catch(SQLException e)
             {
+
             } try {
-                if(conn!=null) conn.close();
-            } catch(SQLException se) {
-                se.printStackTrace();
+                if(conn!=null)
+                {
+                    conn.close();
+                }
+            } catch(SQLException e)
+            {
+                e.printStackTrace();
             }
         }
         return books;
