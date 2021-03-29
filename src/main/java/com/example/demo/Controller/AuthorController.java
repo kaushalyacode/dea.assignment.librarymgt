@@ -4,12 +4,14 @@ import com.example.demo.Data.Model.Author;
 import com.example.demo.Data.Repository.Interface.IAuthorRepository;
 import com.example.demo.Services.Infrastructure.AuthorService;
 import com.example.demo.Services.Interface.IAuthorService;
+import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class AuthorController {
 
 
@@ -23,10 +25,11 @@ public class AuthorController {
     }
 
     @RequestMapping("/addAuthor")
-    public String addAuthor()
+    public Author addAuthor()
     {
-      //  iAuthorRepository.sav
-        return  "Nol";
-
+        Author a= new Author();
+        a.setName("name");
+        var response =iAuthorRepository.save(a);
+        return  a;
     }
 }
