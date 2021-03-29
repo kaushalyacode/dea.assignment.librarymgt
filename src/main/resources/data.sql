@@ -113,3 +113,23 @@ insert into Staff_Member(member_id,memeber_name,memeber_telephone,memeber_nic) v
 insert into Staff_Member(member_id,memeber_name,memeber_telephone,memeber_nic) values ( 2,'STF2','','223456789V');
 insert into Staff_Member(member_id,memeber_name,memeber_telephone,memeber_nic) values ( 3,'STF3','','323456789V');
 insert into Staff_Member(member_id,memeber_name,memeber_telephone,memeber_nic) values ( 4,'STF4','','223406789V');
+
+--INSERT REFERENCING
+insert into Reference_book_operation_details(referencing_id,reference_book_issued_date,reference_book_due_date,Book_id,staff_memeber_id)
+values ( 1,'2008-11-11 13:23:44','2008-11-11 13:23:44',1,2);
+insert into Reference_book_operation_details(referencing_id,reference_book_issued_date,reference_book_due_date,Book_id,staff_memeber_id)
+values ( 2,'2008-11-11 13:23:44','2008-11-11 13:23:44',1,2);
+insert into Reference_book_operation_details(referencing_id,reference_book_issued_date,reference_book_due_date,Book_id,student_id)
+values ( 3,'2008-11-11 13:23:44','2008-11-11 13:23:44',2,1);
+insert into Reference_book_operation_details(referencing_id,reference_book_issued_date,reference_book_due_date,Book_id,student_id)
+values ( 4,'2008-11-11 13:23:44','2008-11-11 13:23:44',2,1);
+
+--INSERT LENDING
+insert into Lending_book_operation_details(lending_id,lending_book_issued_date,lending_book_due_date,Book_id,student_id)
+values ( 1,'2008-11-11 13:23:44','2008-11-11 13:23:44',3,2);
+insert into Lending_book_operation_details(lending_id,lending_book_issued_date,lending_book_due_date,Book_id,student_id)
+values ( 2,'2008-11-11 13:23:44','2008-11-11 13:23:44',4,2);
+insert into Lending_book_operation_details(lending_id,lending_book_issued_date,lending_book_due_date,Book_id,staff_memeber_id)
+values ( 3,'2008-11-11 13:23:44','2008-11-11 13:23:44',5,1);
+insert into Lending_book_operation_details(lending_id,lending_book_issued_date,lending_book_due_date,Book_id,staff_memeber_id)
+values ( 4,'2008-11-11 13:23:44','2008-11-11 13:23:44',6,1);

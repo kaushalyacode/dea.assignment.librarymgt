@@ -24,12 +24,12 @@ public class Referencing
     private Book book;
 
     /*many to one unidirectional*/
-    @ManyToOne(optional = false)
-    @JoinColumn(name="student_id")
+    @ManyToOne(optional = true)
+    @JoinColumn(name="student_id",nullable = true)
     private Student student;
 
     /*many to one unidirectional*/
-    @ManyToOne(optional = false)
-    @JoinColumn(name="staff_memeber_id")
+    @ManyToOne(optional = true)
+    @JoinColumn(name="staff_memeber_id",nullable = true)
     private StaffMember staffMember;
 }
