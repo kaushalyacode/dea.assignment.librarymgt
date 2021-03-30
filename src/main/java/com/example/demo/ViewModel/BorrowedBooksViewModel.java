@@ -4,14 +4,10 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-
 @Getter
 @Setter
 @ToString
 public class BorrowedBooksViewModel {
-
 
     private Long id;
 

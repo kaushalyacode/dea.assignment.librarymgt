@@ -22,6 +22,13 @@ public class Dao {
     Collection referencing =null;
 
     String retrieveBooks = "SELECT * FROM book where stock_quantity <> available_quantity";
+    String retrieveRefBooks  ="select  * from reference_book_operation_details  as ref join book as b  on ref.book_id = b.book_id \n" +
+            "left join \n" +
+            "student as s on ref.student_id = s.student_id  \n" +
+            "left join staff_member \n" +
+            "as sf \n" +
+            "on \n" +
+            "ref.staff_memeber_id= sf.member_id";
     String retrieveReferencing ="SELECT  * FROM  Reference_book_operation_details";
     String retrieveLending = "SELECT  * FROM  Lending_book_operation_details";
 
