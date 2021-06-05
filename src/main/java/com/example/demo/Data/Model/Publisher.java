@@ -11,16 +11,15 @@ import javax.persistence.*;
 @ToString
 @Entity
 @Table(name ="Publisher" , schema = "public")
-public class Publisher
-{
+public class Publisher {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name ="PublisherId", nullable= false)
+    @Column(name = "publisher_id", nullable = false, updatable = false)
     private int id;
 
-    @Column(name ="PublisherName", nullable= false)
+    @Column(name = "publisher_name", nullable = false, updatable = true)
     private String name;
 
-    @Column(name ="PublisherTelephone", nullable= true)
+    @Column(name = "publisher_telephone", nullable = true, updatable = true)
     private String telephone;
 }
